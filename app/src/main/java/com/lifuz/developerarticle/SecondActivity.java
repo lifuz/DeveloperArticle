@@ -1,33 +1,23 @@
 package com.lifuz.developerarticle;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * @author:李富
+ * @email:lifuzz@163.com ${date}
+ */
+public class SecondActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
-
-    private Button btn;
+    private static final String TAG = "SecondActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
         Log.e(TAG,"onCreate");
-
-        btn = (Button) findViewById(R.id.btn);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,SecondActivity.class));
-            }
-        });
     }
 
     @Override
